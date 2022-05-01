@@ -1,0 +1,25 @@
+.plugin-card{
+    width: 33%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid #efefef;
+    border-radius: 10px;
+    .plugin-card__details{
+        // flex:.7;
+        flex-basis: 75%;
+        .plugin-card__details__title{
+            font-weight: 500;
+            font-size: 20px;
+            margin-top: 0;
+        }
+        .plugin-card__details__desc{
+            color: #a3a7ad;
+        }
+    }
+    .plugin-card__status{
+        // flex: .1;
+        flex-basis: 20px;
+    }
+}

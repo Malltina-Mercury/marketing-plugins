@@ -1,3 +1,4 @@
+import PluginCard from "../components/PluginCard";
 function App() {
   return (
     <div className="App">
@@ -6,6 +7,7 @@ function App() {
             Marketing Plugins
         </h1>
       </header>
+      <PluginCard/>
     </div>
   );
 }
