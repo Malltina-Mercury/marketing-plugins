@@ -6,13 +6,13 @@ const PluginCard = ({}) => {
   return (
     <div className={styles.PluginCard}>
       <div className={styles.Details}>
-        <h3 className={styles.Title}>Plugin1</h3>
+        <h3 className={styles.Title}>Plugin 1</h3>
         <p className={styles.Description}>Lorem ipsum dolor sit amet,
           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
           labore et dolore magna aliqua</p>
       </div>
       <div className={styles.Status}>
-        <PluginStatus/>
+        <PluginStatus status={false}/>
       </div>
     </div>
   );

@@ -1,79 +1,65 @@
-$allowedColor: #7ac494;
-$blockedColor: #b63d44;
+.Switch {
+  @apply focus:outline-none;
+  @apply relative;
+  @apply inline-flex;
+  @apply h-5;
+  @apply w-10;
+  @apply flex-shrink-0;
+  @apply cursor-pointer;
+  @apply rounded-full;
+  @apply border-2;
+  @apply border-transparent;
+  @apply transition-colors;
+  @apply duration-200;
+  @apply ease-in-out;
+  @apply focus-visible:ring-2;
+  @apply focus-visible:ring-white;
+  @apply focus-visible:ring-opacity-75;
+}
 
-.plugin-status {
-  position: relative;
-  display: inline-block;
+.Slider {
+  @apply pointer-events-none;
+  @apply inline-block;
+  @apply h-4;
+  @apply w-4;
+  @apply transform;
+  @apply rounded-full;
+  @apply bg-white;
+  @apply shadow-lg;
+  @apply ring-0;
+  @apply transition;
+  @apply duration-200;
+  @apply ease-in-out;
+}
 
-  width: 40px;
-  height: 20px;
+.Title {
+  @apply text-xs;
+}
 
-  .checkbox {
-    opacity: 0;
-    width: 0;
-    height: 0;
-
-    &:checked {
-      + .plugin-status__slider {
-        background-color: $allowedColor;
-      }
-
-      + .plugin-status__slider:before {
-        -webkit-transform: translateX(18px);
-        -ms-transform: translateX(18px);
-        transform: translateX(18px);
-      }
-
-      ~ .plugin-status__title {
-        color: $allowedColor
-      }
-    }
-
-    &:focus {
-      + .plugin-status__slider {
-        box-shadow: 0 0 1px $allowedColor;
-      }
-    }
+.Enable {
+  .Switch {
+    @apply bg-teal-500;
   }
 
-  .plugin-status__slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $blockedColor;
-    -webkit-transition: .4s;
-    transition: .4s;
-
-    &:before {
-      position: absolute;
-      content: "";
-      height: 15px;
-      width: 15px;
-      left: 4px;
-      bottom: 3px;
-      background-color: white;
-      -webkit-transition: .4s;
-      transition: .4s;
-    }
-
-    /* Rounded sliders */
-    &.round {
-      border-radius: 34px;
-    }
-
-    &.round:before {
-      border-radius: 50%;
-    }
+  .Slider {
+    @apply translate-x-5;
   }
 
-  .plugin-status__title {
-    color: $blockedColor;
-    font-size: 10px;
-    text-align: center;
-    display: block;
+  .Title {
+    @apply text-teal-500;
+  }
+}
+
+.Disable {
+  .Switch {
+    @apply bg-red-500;
   }
 
+  .Slider {
+    @apply translate-x-0;
+  }
+
+  .Title {
+    @apply text-red-500;
+  }
 }

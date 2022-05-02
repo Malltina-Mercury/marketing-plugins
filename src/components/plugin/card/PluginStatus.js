@@ -1,16 +1,25 @@
-import React from "react";
-import cn from "classnames";
-import styles from './PluginStatus.module.scss';
+import React, {useState} from "react";
+import {Switch} from '@headlessui/react'
+import styles from "./PluginStatus.module.scss"
 
-const PluginStatus = ({})=>{
+const PluginStatus = ({status}) => {
+  const [enabled, setEnabled] = useState(false)
+
   return (
-    <>
-      <label className={styles.pluginStatus}>
-        <input type="checkbox" className={styles.checkbox}/>
-        <span className={styles.pluginStatus__slider}/>
-        <span className={styles.pluginStatus__title}>Allowed</span>
-      </label>
-    </>
+    <div className={enabled ? styles.Enable : styles.Disable}>
+      <Switch
+        checked={enabled}
+        onChange={setEnabled}
+        className={styles.Switch}
+      >
+        <span className="sr-only">{enabled ? 'Allowed' : 'Blocked'}</span>
+        <span
+          aria-hidden="true"
+          className={styles.Slider}
+        />
+      </Switch>
+      <span className={styles.Title}>{enabled ? 'Allowed' : 'Blocked'}</span>
+    </div>
   );
 }
 
