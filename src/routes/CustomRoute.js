@@ -9,6 +9,7 @@ const CustomRoute = ({items, isLoading}) => {
     <div>
       <Routes>
         <Route path="/" element={<CardsList items={items} isLoading={isLoading} />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </div>
   )
