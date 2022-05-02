@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Card from "../components/card/Card";
 import CardsList from "../components/card/CardList";
-import Error404 from "../components/Pages/Error404";
+import Error404 from "../pages/Error404";
 
 
 

@@ -1,9 +1,6 @@
-import PluginList from "../components/plugin/list/PluginList";
-import { useEffect, useState } from "react";
-import CardsList from "../components/card/CardList";
+import {useEffect, useState} from "react";
 import request from "../tools/request";
-import { BrowserRouter as RouterProvider } from "react-router-dom";
-import CustomRoute from "../routes/CustomRoute";
+import Router from "../routes/Router";
 
 
 function App() {
@@ -20,14 +17,13 @@ function App() {
 
   return (
     <div className="App">
-      <RouterProvider>
-        <header className="App-header">
-          <h1 className="text-6xl font-bold text-center">Marketing Plugins</h1>
-        </header>
-        <PluginList />
-        <CustomRoute items={items} isLoading={isLoading} />
-        <h1 style={{ textAlign: "center" }}>Marketing Plugins</h1>
-      </RouterProvider>
+      <header className="App-header">
+        <h1 className="text-6xl font-bold text-center">Marketing Plugins</h1>
+      </header>
+      {/*<PluginList/>*/}
+      {/*<CustomRoute items={items} isLoading={isLoading}/>*/}
+      <Router/>
+      <h1 style={{textAlign: "center"}}>Marketing Plugins</h1>
     </div>
   );
 }
