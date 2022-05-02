@@ -1,0 +1,26 @@
+.PluginCard {
+  @apply flex;
+  @apply flex-wrap;
+  @apply justify-between;
+  @apply p-5;
+  @apply border-2 border-solid border-gray-200;
+  @apply rounded-xl;
+
+  .Details {
+    @apply basis-3/4;
+
+    .Title {
+      @apply font-medium;
+      @apply text-xl;
+      @apply m-0;
+    }
+
+    .Description {
+      @apply text-gray-400;
+    }
+  }
+
+  .Status {
+    @apply basis-1/4;
+  }
+}
