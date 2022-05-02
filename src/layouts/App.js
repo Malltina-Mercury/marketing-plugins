@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import CardsList from "../components/card/CardList";
 import request from "../tools/request";
 import { BrowserRouter as RouterProvider } from "react-router-dom";
+import CustomRoute from "../routes/CustomRoute";
+
 
 function App() {
   const [items, setItems] = useState([]);
@@ -23,8 +25,8 @@ function App() {
           <h1 className="text-6xl font-bold text-center">Marketing Plugins</h1>
         </header>
         <PluginList />
+        <CustomRoute items={items} isLoading={isLoading} />
         <h1 style={{ textAlign: "center" }}>Marketing Plugins</h1>
-        <CardsList items={items} isLoading={isLoading} />
       </RouterProvider>
     </div>
   );
