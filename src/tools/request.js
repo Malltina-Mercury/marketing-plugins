@@ -4,7 +4,7 @@ import { getToken } from './utils'
 
 const request = axios.create({
   baseURL: BASE_URL,
-  timeout: 1000,
+  timeout: 10000,
   headers: { 'Content-Type': 'application/json' },
 })
 
