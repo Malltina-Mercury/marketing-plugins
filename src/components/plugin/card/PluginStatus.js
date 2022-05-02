@@ -7,7 +7,7 @@ const PluginStatus = ({})=>{
     <>
       <label className={styles.pluginStatus}>
         <input type="checkbox" className={styles.checkbox}/>
-        <span className={styles.pluginStatus__slider}></span>
+        <span className={styles.pluginStatus__slider}/>
         <span className={styles.pluginStatus__title}>Allowed</span>
       </label>
     </>
