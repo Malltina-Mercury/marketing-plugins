@@ -1,8 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./PluginCard.module.scss";
 import PluginStatus from "./PluginStatus";
 
-const PluginCard = ({}) => {
+const PluginCard = () => {
+  const [enabled, setEnabled] = useState(false);
+
+  const x = (c) => {
+    setEnabled(prevState => c)
+  }
+
   return (
     <div className={styles.PluginCard}>
       <div className={styles.Details}>
@@ -12,7 +18,7 @@ const PluginCard = ({}) => {
           labore et dolore magna aliqua</p>
       </div>
       <div className={styles.Status}>
-        <PluginStatus status={false}/>
+        <PluginStatus status={false} onChanged={x}/>
       </div>
     </div>
   );

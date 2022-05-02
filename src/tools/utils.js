@@ -1,5 +1,5 @@
 import cookie from 'js-cookie'
-import { TOKEN_NAME } from './constants'
+import {TOKEN_NAME} from './constants'
 
 export function setToken(token) {
   cookie.set(TOKEN_NAME, token)
