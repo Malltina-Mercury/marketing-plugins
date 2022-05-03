@@ -20,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate": "node mock/GenerateData.mjs",
+    "mock": "json-server --watch ./db.json --port 3001"
   },
   "eslintConfig": {
     "extends": [
@@ -41,6 +43,10 @@
     ]
   },
   "devDependencies": {
+    "@faker-js/faker": "^6.2.0",
+    "chance": "^1.1.8",
+    "json-schema-faker": "^0.5.0-rcv.42",
+    "json-server": "^0.17.0",
     "autoprefixer": "^10.4.5",
     "postcss": "^8.4.13",
     "postcss-import": "^14.1.0",
