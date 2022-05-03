@@ -14,6 +14,15 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+### `yarn run generate`
+
+Generate mock data based on DataSchema
+
+### `yarn run mock`
+
+Serve mock data.
+Open [http://localhost:3001](http://localhost:3001) to view mock data.
+
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.\

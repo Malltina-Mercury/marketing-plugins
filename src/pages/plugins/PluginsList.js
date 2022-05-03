@@ -1,11 +1,21 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import request from "../../tools/request";
+import CardsList from "../../components/card/CardList";
 
 const PluginsList = () => {
+  const [items, setItems] = useState([]);
+  const [isLoading, setLoading] = useState(true);
+
+  useEffect(() => {
+    request("/Cards")
+      .then((res) => {
+        setItems(res.data);
+      })
+      .finally(setLoading(false));
+  }, []);
+
   return (
-    <div>
-      {/* <h1>Plugins List</h1> */}
-      <p></p>
-    </div>
+    <CardsList items={items} isLoading={isLoading}/>
   );
 }
 
