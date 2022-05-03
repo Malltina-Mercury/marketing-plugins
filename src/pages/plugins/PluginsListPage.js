@@ -4,14 +4,17 @@ import PluginList from "../../components/plugin/list/PluginList";
 
 const PluginsListPage = () => {
   const [items, setItems] = useState([]);
-  const [isLoading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true)
     request("/Cards")
       .then((res) => {
         setItems(res.data);
       })
-      .finally(setLoading(false));
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   return (
