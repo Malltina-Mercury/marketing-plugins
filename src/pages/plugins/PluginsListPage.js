@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import request from "../../tools/request";
-import CardsList from "../../components/card/CardList";
+import PluginList from "../../components/plugin/list/PluginList";
 
-const PluginsList = () => {
+const PluginsListPage = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
@@ -15,8 +15,8 @@ const PluginsList = () => {
   }, []);
 
   return (
-    <CardsList items={items} isLoading={isLoading}/>
+    <PluginList items={items} isLoading={isLoading}/>
   );
 }
 
-export default PluginsList;
+export default PluginsListPage;
