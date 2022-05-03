@@ -8,8 +8,8 @@ const PluginList = ({items, isLoading}) => {
   ) : (
     <div className={styles.PluginList}>
       {items.map((item) => (
-        <div className={styles.PluginItem}>
-          <PluginCard key={item.id} item={item}/>
+        <div key={item.id} className={styles.PluginItem}>
+          <PluginCard item={item}/>
         </div>
       ))}
     </div>

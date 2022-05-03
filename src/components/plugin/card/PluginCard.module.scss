@@ -1,22 +1,19 @@
 .PluginCard {
+  @apply h-full;
   @apply flex;
   @apply flex-wrap;
   @apply justify-between;
-  @apply p-5 mb-5;
+  @apply p-5;
   @apply border-2 border-solid border-gray-200;
   @apply rounded-xl;
-  @apply lg:basis-[32%] basis-full;
-  
-  // flex-basis:calc(33% - 10px); /* separate properties for IE11 upport */
-
 
   .Details {
-    @apply basis-3/4;
+    @apply basis-[calc(100%-3rem)];
 
     .Title {
       @apply font-medium;
       @apply text-xl;
-      @apply m-0;
+      @apply mt-0 mb-1;
     }
 
     .Description {
@@ -25,7 +22,6 @@
   }
 
   .Status {
-    @apply basis-1/4;
-    @apply flex flex-row-reverse;
+    @apply basis-[3rem];
   }
 }
