@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import request from "../tools/request";
 import Router from "../routes/Router";
+import PluginList from "../components/plugin/list/PluginList";
 
 
 function App() {
@@ -18,9 +19,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="text-6xl font-bold text-center">Marketing Plugins</h1>
+        <h1 className="text-3xl font-bold text-center py-4">Marketing Plugins</h1>
       </header>
-      {/*<PluginList/>*/}
+      <PluginList items={items} isLoading={isLoading}/>
       {/*<CustomRoute items={items} isLoading={isLoading}/>*/}
       <Router/>
       <h1 style={{textAlign: "center"}}>Marketing Plugins</h1>

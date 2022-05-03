@@ -22,5 +22,6 @@
 
   .Status {
     @apply basis-1/4;
+    @apply flex flex-row-reverse;
   }
 }
