@@ -1,15 +1,20 @@
-import React, {useState} from "react";
+import React, {useCallback, useState} from "react";
 import {Switch} from '@headlessui/react'
 import styles from "./PluginStatus.module.scss"
 
-const PluginStatus = ({status}) => {
-  const [enabled, setEnabled] = useState(false)
+const PluginStatus = ({status, onChanged}) => {
+  const [enabled, setEnabled] = useState(status)
+
+  const onChangeStatus = useCallback((checked) => {
+    setEnabled(() => checked);
+    onChanged(checked);
+  }, []);
 
   return (
     <div className={enabled ? styles.Enable : styles.Disable}>
       <Switch
         checked={enabled}
-        onChange={setEnabled}
+        onChange={onChangeStatus}
         className={styles.Switch}
       >
         <span className="sr-only">{enabled ? 'Allowed' : 'Blocked'}</span>

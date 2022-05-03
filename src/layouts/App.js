@@ -1,14 +1,13 @@
-import PluginList from "../components/plugin/list/PluginList";
+import Router from "../routes/Router";
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="text-6xl font-bold text-center">
-          Marketing Plugins
-        </h1>
+        <h1 className="text-3xl font-bold text-center">Marketing Plugins</h1>
       </header>
-      <PluginList/>
+      <Router/>
     </div>
   );
 }
