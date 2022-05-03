@@ -24,7 +24,7 @@ function App() {
       <PluginList items={items} isLoading={isLoading}/>
       {/*<CustomRoute items={items} isLoading={isLoading}/>*/}
       <Router/>
-      <h1 style={{textAlign: "center"}}>Marketing Plugins</h1>
+      {/* <h1 style={{textAlign: "center"}}>Marketing Plugins</h1> */}
     </div>
   );
 }
