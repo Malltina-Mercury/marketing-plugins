@@ -2,21 +2,16 @@ import React from "react";
 import styles from "./PluginList.module.scss";
 import PluginCard from "../card/PluginCard";
 
-const PluginList = ({}) => {
-  return (
+const PluginList = ({items, isLoading}) => {
+  return isLoading ? (
+    <h1>Loading...</h1>
+  ) : (
     <div className={styles.PluginList}>
-      <div className={styles.PluginItem}>
-        <PluginCard/>
-      </div>
-      <div className={styles.PluginItem}>
-        <PluginCard/>
-      </div>
-      <div className={styles.PluginItem}>
-        <PluginCard/>
-      </div>
-      <div className={styles.PluginItem}>
-        <PluginCard/>
-      </div>
+      {items.map((item) => (
+        <div key={item.id} className={styles.PluginItem}>
+          <PluginCard item={item}/>
+        </div>
+      ))}
     </div>
   );
 }

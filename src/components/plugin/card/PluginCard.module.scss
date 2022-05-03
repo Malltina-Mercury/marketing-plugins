@@ -1,4 +1,5 @@
 .PluginCard {
+  @apply h-full;
   @apply flex;
   @apply flex-wrap;
   @apply justify-between;
@@ -7,12 +8,12 @@
   @apply rounded-xl;
 
   .Details {
-    @apply basis-3/4;
+    @apply basis-[calc(100%-3rem)];
 
     .Title {
       @apply font-medium;
       @apply text-xl;
-      @apply m-0;
+      @apply mt-0 mb-1;
     }
 
     .Description {
@@ -21,6 +22,6 @@
   }
 
   .Status {
-    @apply basis-1/4;
+    @apply basis-[3rem];
   }
 }
