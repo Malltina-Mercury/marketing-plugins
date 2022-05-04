@@ -1,0 +1,66 @@
+.Switch {
+  @apply focus:outline-none;
+  @apply relative;
+  @apply inline-flex;
+  @apply h-5;
+  @apply w-10;
+  @apply flex-shrink-0;
+  @apply cursor-pointer;
+  @apply rounded-full;
+  @apply border-2;
+  @apply border-transparent;
+  @apply transition-colors;
+  @apply duration-200;
+  @apply ease-in-out;
+  @apply focus-visible:ring-2;
+  @apply focus-visible:ring-white;
+  @apply focus-visible:ring-opacity-75;
+}
+
+.Slider {
+  @apply pointer-events-none;
+  @apply inline-block;
+  @apply h-4;
+  @apply w-4;
+  @apply transform;
+  @apply rounded-full;
+  @apply bg-white;
+  @apply shadow-lg;
+  @apply ring-0;
+  @apply transition;
+  @apply duration-200;
+  @apply ease-in-out;
+}
+
+.Title {
+  @apply text-xs;
+  @apply block;
+}
+
+.Enable {
+  .Switch {
+    @apply bg-teal-500;
+  }
+
+  .Slider {
+    @apply translate-x-5;
+  }
+
+  .Title {
+    @apply text-teal-500;
+  }
+}
+
+.Disable {
+  .Switch {
+    @apply bg-red-500;
+  }
+
+  .Slider {
+    @apply translate-x-0;
+  }
+
+  .Title {
+    @apply text-red-500;
+  }
+}
