@@ -17,7 +17,6 @@ const PluginStatus = ({status, onChanged}) => {
         onChange={onChangeStatus}
         className={styles.Switch}
       >
-        <span className="sr-only">{enabled ? 'Allowed' : 'Blocked'}</span>
         <span
           aria-hidden="true"
           className={styles.Slider}

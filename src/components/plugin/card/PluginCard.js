@@ -19,7 +19,7 @@ const PluginCard = ({item}) => {
         <p className={styles.Description}>{item.description}</p>
       </div>
       <div className={styles.Status}>
-        <PluginStatus status={false} onChanged={x}/>
+        <PluginStatus status={item.status} onChanged={x}/>
       </div>
     </div>
   );
