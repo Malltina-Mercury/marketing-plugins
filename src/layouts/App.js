@@ -1,4 +1,6 @@
+import React from "react";
 import Router from "../routes/Router";
+import {Link} from "react-router-dom";
 
 
 function App() {
@@ -6,7 +8,7 @@ function App() {
     <div className="container mx-auto px-4">
       <header>
         <h1 className="text-2xl font-bold text-left py-4">
-          Marketing Plugins
+          <Link to='/'>Marketing Plugins</Link>
         </h1>
       </header>
 

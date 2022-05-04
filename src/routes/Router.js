@@ -1,15 +1,15 @@
 import React from 'react'
 import {Route, Routes} from "react-router-dom";
-import PluginsListPage from "../pages/plugins/PluginsListPage";
+import ListPage from "../pages/plugins/ListPage";
 import Error404 from "../pages/Error404";
-import PluginDetailPage from "../pages/plugins/PluginDetailPage";
+import DetailPage from "../pages/plugins/DetailPage";
 
 const Router = () => {
   return (
     <Routes>
-      <Route path="" element={<PluginsListPage/>}/>
-      <Route path="plugins/" element={<PluginsListPage/>}/>
-      <Route path="plugins/:id/" element={<PluginDetailPage/>}/>
+      <Route path="" element={<ListPage/>}/>
+      <Route path="plugins/" element={<ListPage/>}/>
+      <Route path="plugins/:id/" element={<DetailPage/>}/>
       <Route path="*" element={<Error404/>}/>
     </Routes>
   );

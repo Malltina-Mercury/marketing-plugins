@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PluginDetailPage = () => {
+const DetailPage = () => {
   return (
     <div>
       <h1>Plugin Detail</h1>
@@ -9,4 +9,4 @@ const PluginDetailPage = () => {
   );
 }
 
-export default PluginDetailPage;
+export default DetailPage;

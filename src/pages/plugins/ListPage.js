@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import request from "../../tools/request";
 import PluginList from "../../components/plugin/list/PluginList";
 
-const PluginsListPage = () => {
+const ListPage = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setLoading] = useState(false);
 
@@ -22,4 +22,4 @@ const PluginsListPage = () => {
   );
 }
 
-export default PluginsListPage;
+export default ListPage;
