@@ -1,24 +1,14 @@
-import React, {useEffect, useState} from 'react'
-import request from "../../tools/request";
+import React from 'react'
 import PluginList from "../../components/plugin/list/PluginList";
+import useFetchAllPlugins from "../../hocks/api/useFetchAllPlugins";
 
 const ListPage = () => {
-  const [items, setItems] = useState([]);
-  const [isLoading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setLoading(true)
-    request("/Cards")
-      .then((res) => {
-        setItems(res.data);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, []);
-
+  const {data, error, loaded} = useFetchAllPlugins()
   return (
-    <PluginList items={items} isLoading={isLoading}/>
+    <>
+      {!loaded && 'Loading...'}
+      {loaded && !error ? (<PluginList items={data}/>) : error}
+    </>
   );
 }
 

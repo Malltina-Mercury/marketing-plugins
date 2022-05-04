@@ -1,10 +1,17 @@
 import React from 'react'
+import {useParams} from "react-router-dom";
+
+import useFetchPlugin from "../../hocks/api/useFetchPlugin";
+import PluginCard from "../../components/plugin/card/PluginCard";
 
 const DetailPage = () => {
+  let {id} = useParams();
+  const {data, error, loaded} = useFetchPlugin(id);
+
   return (
     <div>
-      <h1>Plugin Detail</h1>
-      <p></p>
+      {!loaded && 'Loading...'}
+      {loaded && !error ? (<PluginCard item={data}/>) : error}
     </div>
   );
 }
